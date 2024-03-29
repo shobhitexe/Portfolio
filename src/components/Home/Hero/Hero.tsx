@@ -32,6 +32,7 @@ export default function Hero() {
       </motion.div>
       <PageHeader
         headText="FULL STACK WEB DEVELOPER"
+        textSize="sm:text-[8vw] text-[11vw]"
         headDesc="Crafting user-friendly web applications and automated bots and
           dabbling in the world of Web3. Always pushing code boundaries and
           finding creative solutions."

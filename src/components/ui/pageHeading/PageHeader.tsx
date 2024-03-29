@@ -19,6 +19,7 @@ type PageHeaderProps = {
   indexHero: boolean;
   redirectOne: string;
   redirectTwo?: string;
+  textSize?: string;
 };
 
 export default function PageHeader({
@@ -29,6 +30,7 @@ export default function PageHeader({
   buttonTwoText,
   startHighlight,
   endHighlight,
+  textSize = "text-[7vw]",
 
   redirectOne,
   redirectTwo,
@@ -39,6 +41,7 @@ export default function PageHeader({
         HeroHeadingText={headText}
         startHighlight={startHighlight}
         endHighlight={endHighlight}
+        textSize={textSize}
       />
       <div className="flex flex-col gap-5 w-full">
         <motion.div
@@ -51,7 +54,7 @@ export default function PageHeader({
             damping: 6,
             type: "spring",
           }}
-          className="md:w-[40%] sm:w-[50%] w-full mt-10 font-general text-whiteShade md:text-[20px] sm:text-[18px] text-[15px]"
+          className="md:w-[40%] sm:w-[50%] w-full mt-10 font-general text-whiteShade md:text-text-xl sm:text-text-lg text-text-base"
         >
           {headDesc}
         </motion.div>

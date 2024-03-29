@@ -8,18 +8,20 @@ type HeaderHeadingProps = {
   HeroHeadingText: string;
   startHighlight?: number;
   endHighlight?: number;
+  textSize?: string;
 };
 
 export default function HeaderHeading({
   HeroHeadingText,
   startHighlight = 0,
   endHighlight = 3,
+  textSize = "text-[7vw]",
 }: HeaderHeadingProps) {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
 
   return (
     <div
-      className={`w-full flex sm:gap-5 gap-2 flex-wrap text-whiteShade overflow-hidden font-satoshi text-[7vw] mt-5 lg:leading-[110px] md:leading-[90px] sm:leading-[70px] ss:leading-[60px] xs:leading-[40px] leading-[30px] font-semibold ${
+      className={`w-full flex sm:gap-5 gap-2 flex-wrap text-whiteShade overflow-hidden font-satoshi ${textSize} mt-5 leading-[0.8] font-semibold ${
         isNavOpen && "-z-50"
       }`}
     >
